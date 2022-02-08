@@ -1,0 +1,6 @@
+.search {
+    display: inline-block;
+    width: var(--sidebar-width);
+    text-align: center;
+    background-color: var(--dark-bkground);
+}

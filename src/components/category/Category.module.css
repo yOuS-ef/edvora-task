@@ -1,0 +1,14 @@
+.category {
+    margin-top: var(--margin-between-each-category);
+}
+
+.category_title {
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.product_list {
+    margin-top: 16px;
+    background-color: var(--dark-bkground);
+}
+

@@ -1,0 +1,10 @@
+.header {
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: 21px;
+    font-weight: 700;
+}
+
+.header2 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}

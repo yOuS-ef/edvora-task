@@ -3,15 +3,23 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Roboto',sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-  --light-bkground : #E5E5E5;
+  --medium-bkground : #292929;
   --dark-bkground: #131313;
-  --medium-bkground: #232323;
+  --light-bkground: #232323;
+
+  --sidebar-width: 228px;
+  --product-card-width: 210px;
+  --product-card-width-after-hover: 230px;
+
+  --margin-between-cards: 20px;
+  --margin-between-each-category: 20px;
+  --margin-between-each-dropdown: 12.5px;
 }
 
 html, body, #root {
@@ -21,4 +29,43 @@ html, body, #root {
 
 * {
   margin: 0;
+  box-sizing: border-box;
+  color: white;
 }
+
+.font11PX {
+  font-size: 11px;
+}
+
+.font12PX {
+  font-size: 12px;
+}
+
+.font13PX {
+  font-size: 13px;
+}
+
+.font15PX {
+  font-size: 15px;
+}
+
+.font16PX {
+  font-size: 16px;
+}
+
+.font17PX {
+  font-size: 17px;
+}
+
+.font20PX {
+  font-size: 20px;
+}
+
+.font25PX {
+  font-size: 25px;
+}
+
+.font35PX {
+  font-size: 35px;
+}
+
