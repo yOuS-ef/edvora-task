@@ -1,17 +1,38 @@
 .app {
-  height: 100%;
+
+  min-height: 100%;
   width: 100%;
   padding: 40px;
-  background-color: var(--light-bkground);
+  background-color: var(--medium-bkground);
   display: flex;
+
 }
 
 .main {
-  display: inline-block;
-  margin-left: 20px;
+  display: block;
+  width: calc(100% - var(--sidebar-width));
+  padding-left: 20px;
 }
 
 .line_seperated {
   display: block;
   border: 1px solid rgba(203, 203, 203, 0.5);
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }

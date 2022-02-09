@@ -1,0 +1,29 @@
+.product_card {
+    width: var(--product-card-width);
+    background-color: var(--light-bkground);
+    padding: 10px;
+    flex: 0 0;
+    border-radius: 5px;
+    flex-basis: unset;
+    transition: transform .2s;
+}
+
+.product_card:hover {
+    /* width: var(--product-card-width-after-hover);
+    height: 400px; */
+    transform: scale(1.1);
+}
+
+.product_card p {
+    word-wrap: break-word;
+}
+
+.dark_gray_color {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.product_img {
+    width: 70px;
+    height: 70px;
+    border-radius: 4.68775px;
+}
