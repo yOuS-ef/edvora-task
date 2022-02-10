@@ -8,19 +8,14 @@
     padding: 10px;
     flex: 0 0 auto;
     border-radius: 5px;
-    /* flex-basis: unset; */
     transition: transform .2s;
 }
 
 .product_card:hover {
-    /* width: var(--product-card-width-after-hover);
-    height: 400px; */
+
     transform: scale(1.1);
 }
 
-/* .product_card p {
-    word-wrap: break-word;
-} */
 .product_card .product_image_name_brand_price {
     display: flex;
     gap: 20px;

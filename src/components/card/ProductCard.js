@@ -6,8 +6,7 @@ function ProductCard({product}) {
     const tempDate = new Date(product.date);
     const month = tempDate.getMonth() + 1;
     const productDate = tempDate.getDate() + ':' + month + ':' + tempDate.getFullYear();
-    // console.log("productDate", productDate);
-    // change size of card when hover on it 
+
     return (
         <div className={styles.product_card}>
             <div className={styles.product_image_name_brand_price}>

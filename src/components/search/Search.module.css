@@ -1,7 +1,6 @@
 .search {
     display: block;
     width: var(--sidebar-width);
-    /* text-align: center; */
     background-color: var(--dark-bkground);
     height: fit-content;
     flex: 0 0 auto;

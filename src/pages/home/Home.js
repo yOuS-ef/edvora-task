@@ -10,11 +10,6 @@ function Home() {
     const [status, setStatus] = useState(STATUS_LOADING);
     const [errorMessage, setErrorMessage] = useState('');
     const [categories, setCategories] = useState({});
-
-    console.log(status);
-    console.log(errorMessage);
-    console.log('categories', categories);
-    console.log('Object.keys(categories)', Object.keys(categories));
     
     return (
         <div className='app'>

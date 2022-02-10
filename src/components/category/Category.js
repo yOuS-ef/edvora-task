@@ -4,14 +4,10 @@ import ProductCard from '../card/ProductCard';
 import styles from './Category.module.css';
 
 function Category({products}) {
-    //console.log("list of products", products);
 
     const [scrollX, setScrollX] = useState(0);
     const [scrollEnd, setScrollEnd] = useState(false);
-    //sort products on date
-    // container contains list and buttons left and right
-        // button left disappear when position start from left and the same for right
-        // or no buttons there when small content
+
     const scrllRef = useRef(null);
 
     const scroll = (shift) => {
