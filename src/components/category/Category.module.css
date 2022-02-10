@@ -40,6 +40,13 @@
     height: 0; */
 }
 
+@media (max-width:516px) {
+
+    .product_list_with_buttons {
+
+        gap: 10px;
+    }
+}
 
 
 

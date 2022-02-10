@@ -62,7 +62,7 @@ function Category({products}) {
             <span className='line_seperated'></span>
             <div className={styles.product_list_with_buttons}>
 
-                {scrollX !== 0 && <button className={styles.prev} onClick={() => scroll(-400)} >
+                {scrollX !== 0 && <button className={styles.prev} onClick={() => scroll(-100)} >
                                     <i className="arrow left"></i>
                                   </button>
                 }
@@ -72,7 +72,7 @@ function Category({products}) {
                         <ProductCard key={index} product={product} />
                     ))}
                 </div>
-                {!scrollEnd && <button className={styles.next} onClick={() => scroll(400)} >
+                {!scrollEnd && <button className={styles.next} onClick={() => scroll(100)} >
                                     <i className="arrow right"></i>
                                </button>
                 }

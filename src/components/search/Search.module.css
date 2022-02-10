@@ -31,4 +31,26 @@
     font-weight: 400;
     border-radius: 4.68775px;
     width: 100%;
+    max-height: 300px;
+
+}
+
+@media (max-width:800px) {
+
+    .search {
+      width: 100%;
+      /* background-color: var(--medium-bkground); */
+      margin-bottom: 20px;
+    }
+
+    .search .drop_down {
+        flex-direction: row;
+    }
+}
+
+@media (max-width:516px) {
+
+    .search .drop_down {
+        flex-direction: column;
+    }
 }

@@ -27,3 +27,16 @@
     height: 70px;
     border-radius: 4.68775px;
 }
+
+@media (max-width:516px) {
+
+    .product_card {
+        width: 170px;
+    }
+
+    /* .product_img {
+        width: 40px;
+        height: 40px;
+    } */
+    
+}
