@@ -108,7 +108,7 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
       else if(list2){
         return list2;
       }
-      return [];
+      return null;
     }
 
     const updateMenues = () => {
@@ -118,11 +118,14 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
         const productListFromCategory = categoriesDict[selections.category];
         const productListFromState = statesDict[selections.state];
         const productListFromCity = citiesDict[selections.city];
-
+ 
         let productList = [];
         productList = instersectTwoLists(productListFromCategory, productListFromState);
         productList = instersectTwoLists(productList, productListFromCity);
 
+        if(!productList) {
+          productList = products;
+        }
         if(productList.length !== 0) {
 
           const {categoriesTemp, statesTemp, citiesTemp}= fullDicsWithData(productList);
@@ -140,6 +143,67 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
 
       }
       
+
+      // console.log("productListFromCategory = ", productListFromCategory);
+      // console.log("productListFromState = ", productListFromState);
+      // console.log("productListFromCity = ", productListFromCity);
+
+      // let productList = [];
+      // productList = instersectTwoLists(productListFromCategory, productListFromState);
+      // productList = instersectTwoLists(productList, productListFromCity);
+      // console.log("productList = ", productList); 
+      // if(!productList){
+      //   productList = products;
+      // }
+
+      // const categoriesTemp = {};
+      // const statesTemp = {};
+      // const citiesTemp = {};
+
+      // if(productList.length !== 0){
+      //   productList.forEach(product => {
+      //     const categoryKey = product.product_name.split(' ').join('-');
+      //     const stateKey = product.address.state.split(' ').join('-');
+      //     const cityKey = product.address.city.split(' ').join('-');
+  
+      //     if (categoriesTemp[categoryKey] === undefined)
+      //       categoriesTemp[categoryKey] = [product];
+      //     else 
+      //       categoriesTemp[categoryKey].push(product);
+          
+      //     if (statesTemp[stateKey] === undefined) 
+      //       statesTemp[stateKey] = [product];
+      //     else
+      //       statesTemp[stateKey].push(product);
+  
+      //     if (citiesTemp[cityKey] === undefined) 
+      //       citiesTemp[cityKey] = [product];
+      //     else
+      //       citiesTemp[cityKey].push(product);
+  
+      //   })
+      //   if(status === STATUS_LOADING){
+      //     setStatus(STATUS_SUCCEEDED);
+      //     setCategories(categoriesTemp);
+      //     setCategoriesDict(categoriesTemp);
+      //     setStatesDict(statesTemp);
+      //     setCitiesDict(citiesTemp);
+      //     setCategoriesMenu(Object.keys(categoriesTemp));
+      //   }
+      //   else {
+      //     setCategories(categoriesTemp);
+      //   }
+
+      //   if(selectionsBollean.categoryIsSelected)
+      //     setStatesMenu(Object.keys(statesTemp));
+      //   if(selectionsBollean.stateIsSelected)  
+      //     setCitiesMenu(Object.keys(citiesTemp));
+      // } else {
+      //   if(status === STATUS_LOADING && dataIsFetched){
+      //     setStatus(STATUS_SUCCEEDED);
+      //   }
+      //   setCategories({});
+      // }
     }
 
     const handleCategoriesMenu = (e) => {
