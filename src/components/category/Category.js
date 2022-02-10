@@ -40,7 +40,7 @@ function Category({products}) {
     useEffect(() => {
 
         products.sort((a, b) => new Date(b.date) - new Date(a.date));
-        console.log('list of sorted products', products);
+        // console.log('list of sorted products', products);
         
         if (scrllRef.current && scrllRef?.current?.scrollWidth === scrllRef?.current?.offsetWidth) 
         {
