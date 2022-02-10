@@ -11,8 +11,9 @@
 .product_list_with_buttons {
     display: flex;
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
     margin-top: 16px;
+    position: relative;
 }
 
 .product_list {
@@ -40,13 +41,18 @@
     height: 0; */
 }
 
-@media (max-width:516px) {
+.prev {
 
-    .product_list_with_buttons {
-
-        gap: 10px;
-    }
+    position: absolute;
+    left: -30px;
 }
+
+.next {
+
+    position: absolute;
+    right: -30px;
+}
+
 
 
 

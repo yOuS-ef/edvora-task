@@ -23,13 +23,13 @@ function Home() {
                 <h1 className={`${styles.header} font35PX`}>Edvora</h1>
                 <h2 className={`${styles.header2} font25PX`}>Products</h2>
                 {status === STATUS_LOADING && <p className='font20PX'>loading</p>}
-                {status === STATUS_FAILED && <p className='font20PX'>Failed to fetch</p>}
+                {status === STATUS_FAILED && <p style={{color: 'red'}} className='font20PX'>{errorMessage}</p>}
                 {(status === STATUS_SUCCEEDED && Object.keys(categories).length !== 0)  && (
                     Object.keys(categories).map((category) => (
                         <Category key={category} products={categories[category]} />
                     ))
                 )}
-                {(status === STATUS_SUCCEEDED && Object.keys(categories).length === 0) && <p style={{marginTop:'20px'}} className='font20PX'> No products with these Filters</p>}
+                {(status === STATUS_SUCCEEDED && Object.keys(categories).length === 0) && <p style={{marginTop:'20px'}} className='font20PX'> No products Found</p>}
             </div>
         </div>
     );

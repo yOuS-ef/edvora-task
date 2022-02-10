@@ -2,7 +2,7 @@
 
   min-height: 100%;
   width: 100%;
-  padding: 40px;
+  padding: 43px 56px 75px 41px;
   background-color: var(--medium-bkground);
   display: flex;
 
@@ -11,7 +11,7 @@
 .main {
   display: block;
   width: calc(100% - var(--sidebar-width));
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .line_seperated {
@@ -44,14 +44,6 @@
   }
   .main {
     width: 100%;
-  }
-}
-
-@media (max-width:516px) {
-
-  .arrow {
-   
-    width: 10px;
-    height: 10px;
+    padding: 0;
   }
 }

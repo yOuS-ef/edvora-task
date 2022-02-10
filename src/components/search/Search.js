@@ -15,6 +15,7 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
     const [citiesMenu, setCitiesMenu] = useState([]);
     
     const [selections, setSelections] = useState({category: '', state: '', city: ''});
+    const [dataIsFetched, setDataIsFetched] = useState(false);
 
     // console.log("states",statesMenu);
     // console.log("statesKeys",Object.keys(statesMenu));
@@ -25,14 +26,17 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
         if(result.status === 200){
             
           setProducts(result.data);
+          setDataIsFetched(true);
         }
         else {
+          setDataIsFetched(false);
           setStatus(STATUS_FAILED);
           setErrorMessage(result.data);
         }
       }).catch(err => {
         setStatus(STATUS_FAILED);
         setErrorMessage(err);
+        setDataIsFetched(false);
       })
       // fetch(GET_REQUEST_URL)
       // .then(response => response.json())
@@ -77,7 +81,7 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
 
     useEffect(() => {
       updateMenues();
-    }, [selections, products]);
+    }, [selections, products, dataIsFetched]);
 
     const instersectTwoLists = (list1, list2) => {
 
@@ -164,6 +168,9 @@ function Search({setCategories, status, setStatus, setErrorMessage}) {
         setStatesMenu(Object.keys(statesTemp));
         setCitiesMenu(Object.keys(citiesTemp));
       } else {
+        if(status === STATUS_LOADING && dataIsFetched){
+          setStatus(STATUS_SUCCEEDED);
+        }
         setCategories({});
       }
       
